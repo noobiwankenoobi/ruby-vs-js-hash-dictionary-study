@@ -113,7 +113,7 @@ conspiracy theories.".
 
 ```ruby
 
-"My name is #{{dale[given_name]}} #{dale[:family_name]} and I'm an #{dale[:occupation]} that enjoys #{dale[:hobbies(1)]}."
+"My name is #{{dale[:given_name]}} #{dale[:family_name]} and I'm an #{dale[:occupation]} that enjoys #{dale[:hobbies(1)]}."
 
 # used:
 # https://github.com/noobiwankenoobi/ruby-hash
@@ -132,8 +132,14 @@ pairs.
 
 ```javascript
 
+const hank = {
+  family_name: 'hill',
+  given_name: 'hank',
+  occupation: 'propane and propane accessories salesman'
+}
 
-
+// used:
+// remembered how to do this
 ```
 
 ## Adding Dictionary Properties in JavaScript
@@ -144,7 +150,18 @@ The array should contain two strings, "drinking beer" and "propane and propane
 accessories".
 
 ```javascript
-// your answer here
+
+hank['middle_name'] = "Rutherford"
+hank['hobbies'] = ["drinking beer", "propane and propane accessories"]
+
+// or
+
+hank.push({middle_name: 'Rutherford'})
+hank.push({hobbies: ['drinking beer', 'propane and propane accessories']})
+// ????
+
+// used:
+// http://www.technicalkeeda.com/javascript-tutorials/create-key-value-pair-array-using-javascript
 ```
 
 ## Removing Dictionary Properties in JavaScript
@@ -152,7 +169,13 @@ accessories".
 Remove the `middle name` property from `hank`.
 
 ```javascript
-// your answer here
+
+delete hank.middle_name
+delete hank['middle_name']
+
+// used:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete
+
 ```
 
 ## Modifying Dictionary Values in JavaScript
@@ -161,7 +184,11 @@ Modify `hank` so that the value of the key `family_name` is "Hill" and the value
 of the key `given-name` is "Hank".
 
 ```javascript
-// your answer here
+
+hank['family_name'] = 'Hill'
+hank['given_name'] = 'Hank'
+
+
 ```
 
 ## JavaScript Dictionary Methods
@@ -170,7 +197,16 @@ Using JavaScript's Array methods, set a variable named `hankKeys` to `hank`'s
 keys.  Additionally, set a variable named `hankValues` to `hanks`'s values.'
 
 ```javascript
-// your answer here
+
+const hankKeys = Object.keys(hank)
+
+const hankValues = Object.values(hank)
+
+// used:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+
+
 ```
 
 ## Accessing Dictionary Properties and Values
@@ -180,5 +216,12 @@ using `hank` that equals "My name is Hank Hill and I'm a propane and propane
 accesories salesman that enjoys drinking beer.".
 
 ```javascript
-// your answer here
+
+"My name is ${hank['given_name']} ${hank['family_name']} and I'm a ${hank.occupation} that enjoys ${hank.hobbies[0]}."
+
+// tried both ways of doing it in the same line^^
+
+// used:
+// Various MDN documentation
+
 ```
