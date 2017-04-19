@@ -39,7 +39,11 @@ should be symbols.
 | occupation | 'exterminator' |
 
 ```ruby
-# your answer here
+
+dale = { :family_name => "gribble", :given_name => "dale", :occupation => "exterminator" }
+
+# used:
+#ruby-doc.org for Hash#[]
 ```
 
 ## Adding Hash Keys in Ruby
@@ -49,7 +53,14 @@ should contain two strings, "drinking beer" and "conspiracy theories".  The keys
 should be symbols.
 
 ```ruby
-#your answer here
+
+
+dale[:middle_name] = "Alvin"
+
+dale[:hobbies] = ["drinking beer", "conspiracy theories"]
+
+# used:
+# http://ruby-doc.org/core-2.3.1/Hash.html#method-i-5B-5D
 ```
 
 ## Removing Hash Keys in Ruby
@@ -57,7 +68,11 @@ should be symbols.
 Remove the `middle name` key from `dale`.
 
 ```ruby
-# your answer here
+
+dale.delete(:middle_name)
+
+# used:
+# https://ruby-doc.org/core-1.9.3/Hash.html
 ```
 
 ## Modifying Hash Values in Ruby
@@ -66,7 +81,14 @@ Modify `dale` so that the value of the key `family_name` is "Gribble" and the
 value of the key `given-name` is "Dale".
 
 ```ruby
-# your answer here
+
+dale[:family_name] = "Gribble"
+
+dale[:given_name] = "Dale"
+
+
+# used:
+# in-class lesson
 ```
 
 ## Ruby Hash Methods
@@ -75,7 +97,12 @@ Using Ruby's Hash methods, set a variable named `dale_keys` to `dale`'s keys.
 Additionally, set a variable named `dale_values` to `dale`'s values.'
 
 ```ruby
-# your answer here
+
+dale_keys = dale.keys
+dale_values = dale.values
+
+# used:
+# https://ruby-doc.org/core-2.2.0/Hash.html#method-i-values
 ```
 
 ## Accessing Hash Properties and Values
@@ -85,7 +112,11 @@ Using Hash methods and string interpolation in Ruby, create a string using
 conspiracy theories.".
 
 ```ruby
-# your answer here
+
+"My name is #{{dale[given_name]}} #{dale[:family_name]} and I'm an #{dale[:occupation]} that enjoys #{dale[:hobbies(1)]}."
+
+# used:
+# https://github.com/noobiwankenoobi/ruby-hash
 ```
 
 ## Creating a Dictionary in JavaScript
@@ -100,7 +131,9 @@ pairs.
 | occupation | 'propane and propane accessories salesman' |
 
 ```javascript
-// your answer here
+
+
+
 ```
 
 ## Adding Dictionary Properties in JavaScript
